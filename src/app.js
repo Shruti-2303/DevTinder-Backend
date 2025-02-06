@@ -1,1 +1,10 @@
-console.log("We are going to start Namaste NodeJs" );
+const express = require("express");
+const app = express();
+
+app.use((req,res) => {
+    res.send("Hello from our first server");
+})
+
+app.listen(3000, () => {
+    console.log("Server is listening on port 3000");
+});
